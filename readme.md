@@ -22,9 +22,19 @@ Vous pouvez utiliser les outils de votre choix l'application doit simplement fon
 *   Permettre le toggle du filtre "type de produit".
 *   Améliorer le HTML/CSS en termes de bonnes pratiques et accessibilité (ou expliquer les recommandations/erreurs dans `rapport.md`).
 
+## Bonus :
+* Si possible créer un dépôt Git et effectuer des commits suivant votre avancée
+* Si possible mettre à jour le readme à la fin du projet 
+* Toute optimisation est la bienvenue
+
+
 ## Rapport
 
 Si vous avez des explications ou des réponses, vous pouvez les écrire dans `rapport.md`.
+
+## Rendu final :
+
+Une fois le test terminé vous pouvez envoyer votre repo git ou une archive zip
 
 ## Note
 
