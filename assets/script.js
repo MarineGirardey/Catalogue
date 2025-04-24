@@ -1,0 +1,1 @@
+// Fichier pour le code JavaScript frontend 

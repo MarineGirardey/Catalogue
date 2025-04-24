@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogue de Produits</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <main
+      class="flex flex-col gap-20 items-center px-16 py-28 mx-auto w-full max-w-none bg-white"
+    >
+      <header
+        class="flex flex-col gap-6 items-start w-full max-w-screen-xl"
+      >
+        <h1 class="text-5xl font-bold text-black">Catalogue</h1>
+        <p class="text-lg text-black">
+          La liste de tous nos produits
+        </p>
+      </header>
+
+      <section
+        class="flex flex-row flex-wrap gap-16 w-full max-w-screen-xl"
+      >
+        <!-- Desktop Filter Sidebar -->
+        <aside
+          class="flex flex-col gap-6 w-[292px]"
+        >
+          <h2 class="text-2xl font-bold text-black">Filtres</h2>
+          <div class="flex flex-col">
+            <!-- Filter Section: Product Type -->
+            <div
+              class="filter-section flex items-center px-2 py-5 border-t border-solid cursor-pointer select-none border-t-black"
+            >
+              <span
+                class="flex-1 text-lg font-semibold text-black"
+                >Type de produit</span
+              >
+              <div>
+                <svg
+                  class="chevron-down"
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.32702 11.4714C8.1464 11.6521 7.85361 11.6521 7.67299 11.4714L2.95773 6.75617C2.77711 6.57555 2.77711 6.28276 2.95773 6.10214L3.17575 5.88409C3.35636 5.70347 3.6492 5.70347 3.82982 5.88409L8 10.0543L12.1702 5.88409C12.3508 5.70347 12.6436 5.70347 12.8242 5.88409L13.0423 6.10214C13.2229 6.28276 13.2229 6.57555 13.0423 6.75617L8.32702 11.4714Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Filter Options -->
+            <div
+              id="filter-product-type"
+              class="filter-options overflow-hidden transition-all duration-[0.3s] ease-[ease-in-out]"
+              style="max-height: none; opacity: 1"
+            >
+              <label
+                class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
+              >
+                <div
+                  class="checkbox relative rounded border-2 border-black border-solid transition-all cursor-pointer duration-[0.2s] ease-[ease] h-[18px] w-[18px]"
+                  data-filter="eyeglasses"
+                ></div>
+                <span class="text-base text-black select-none"
+                  >Lunette de vue</span
+                >
+              </label>
+              <label
+                class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
+              >
+                <div
+                  class="checkbox relative rounded border-2 border-black border-solid transition-all duration-[0.2s] h-[18px] w-[18px]"
+                  data-filter="sunglasses"
+                ></div>
+                <span class="text-base text-black select-none"
+                  >Solaire</span
+                >
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section
+          class="product-grid grid relative grow gap-8 w-auto grid-cols-3"
+        >
+          <!-- Product cards will be dynamically inserted here -->
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
+            <img src="assets/images/image1.png" alt="Produit 1" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 1</h3>
+                <p class="text-sm text-black">Lunette de vue</p>
+              </div>
+              <p class="text-xl font-semibold text-black">50€</p>
+            </div>
+          </article>
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
+            <img src="assets/images/image3.png" alt="Produit 2" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 2</h3>
+                <p class="text-sm text-black">Solaire</p>
+              </div>
+              <p class="text-xl font-semibold text-black">65€</p>
+            </div>
+          </article>
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
+            <img src="assets/images/image1.png" alt="Produit 3" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 3</h3>
+                <p class="text-sm text-black">Lunette de vue</p>
+              </div>
+              <p class="text-xl font-semibold text-black">65€</p>
+            </div>
+          </article>
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
+            <img src="assets/images/image3.png" alt="Produit 4" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 4</h3>
+                <p class="text-sm text-black">Solaire</p>
+              </div>
+              <p class="text-xl font-semibold text-black">65€</p>
+            </div>
+          </article>
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
+            <img src="assets/images/image1.png" alt="Produit 5" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 5</h3>
+                <p class="text-sm text-black">Lunette de vue</p>
+              </div>
+              <p class="text-xl font-semibold text-black">65€</p>
+            </div>
+          </article>
+          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
+            <img src="assets/images/image3.png" alt="Produit 6" class="flex w-full pointer-events-auto">
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-semibold text-black">Produit 6</h3>
+                <p class="text-sm text-black">Solaire</p>
+              </div>
+              <p class="text-xl font-semibold text-black">65€</p>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
