@@ -28,3 +28,25 @@ function displayData(json) {
         </article>
     `).join('');
 }
+
+// Checkbox filter
+function setupFilter() {
+
+    const checkboxes = document.querySelectorAll('.real-checkbox');
+    
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+
+            // Get all checked
+            const selected = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            // Filter allProduct with types of checked boxes
+            const filtered = selected.length
+                ? allProducts.filter(product => selected.includes(product.type))
+                : allProducts;
+                displayData(filtered);
+        });
+    });
+}
