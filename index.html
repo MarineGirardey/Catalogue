@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogue de Produits</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/style.css">
     <style>
       html {
         overflow-y: scroll;
@@ -69,24 +70,30 @@
               <label
                 class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
               >
-                <div
+              <input
+                type="checkbox"
+                class="hidden real-checkbox"
+                value="Lunette de vue"
+              />
+              <div
                   class="checkbox relative rounded border-2 border-black border-solid transition-all cursor-pointer duration-[0.2s] ease-[ease] h-[18px] w-[18px]"
                   data-filter="eyeglasses"
                 ></div>
-                <span class="text-base text-black select-none"
-                  >Lunette de vue</span
-                >
+              <span class="text-base text-black select-none">Lunette de vue</span>
               </label>
               <label
                 class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
               >
+                <input
+                  type="checkbox"
+                  class="hidden real-checkbox"
+                  value="Solaire"
+                />
                 <div
                   class="checkbox relative rounded border-2 border-black border-solid transition-all duration-[0.2s] h-[18px] w-[18px]"
                   data-filter="sunglasses"
                 ></div>
-                <span class="text-base text-black select-none"
-                  >Solaire</span
-                >
+                <span class="text-base text-black select-none">Solaire</span>
               </label>
             </div>
           </div>
@@ -94,71 +101,13 @@
 
         <!-- Product Grid -->
         <section
+          id="products"
           class="product-grid grid relative grow gap-8 w-auto grid-cols-3"
-        >
-          <!-- Product cards will be dynamically inserted here -->
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
-            <img src="assets/images/image1.png" alt="Produit 1" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 1</h3>
-                <p class="text-sm text-black">Lunette de vue</p>
-              </div>
-              <p class="text-xl font-semibold text-black">50€</p>
-            </div>
-          </article>
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
-            <img src="assets/images/image3.png" alt="Produit 2" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 2</h3>
-                <p class="text-sm text-black">Solaire</p>
-              </div>
-              <p class="text-xl font-semibold text-black">65€</p>
-            </div>
-          </article>
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
-            <img src="assets/images/image1.png" alt="Produit 3" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 3</h3>
-                <p class="text-sm text-black">Lunette de vue</p>
-              </div>
-              <p class="text-xl font-semibold text-black">65€</p>
-            </div>
-          </article>
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
-            <img src="assets/images/image3.png" alt="Produit 4" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 4</h3>
-                <p class="text-sm text-black">Solaire</p>
-              </div>
-              <p class="text-xl font-semibold text-black">65€</p>
-            </div>
-          </article>
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="eyeglasses">
-            <img src="assets/images/image1.png" alt="Produit 5" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 5</h3>
-                <p class="text-sm text-black">Lunette de vue</p>
-              </div>
-              <p class="text-xl font-semibold text-black">65€</p>
-            </div>
-          </article>
-          <article class="product-card flex flex-col gap-4 items-start w-full max-w-[280px]" data-type="sunglasses">
-            <img src="assets/images/image3.png" alt="Produit 6" class="flex w-full pointer-events-auto">
-            <div class="flex flex-col gap-2">
-              <div class="flex flex-col items-start">
-                <h3 class="text-lg font-semibold text-black">Produit 6</h3>
-                <p class="text-sm text-black">Solaire</p>
-              </div>
-              <p class="text-xl font-semibold text-black">65€</p>
-            </div>
-          </article>
+        >          
         </section>
       </section>
     </main>
+    <!-- Custom JS file -->
+    <script src="assets/script.js"></script>
   </body>
 </html>
