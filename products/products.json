@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Produit 2",
-      "type": "Solaire",
+      "type": "Lunette de vue",
       "price": "65€",
       "imageUrl": "assets/images/image2.png",
       "alt": "Lunettes de vues noires"
