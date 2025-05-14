@@ -5,42 +5,48 @@
       "name": "Produit 1",
       "type": "Lunette de vue",
       "price": "50€",
-      "imageUrl": "assets/images/image1.png"
+      "imageUrl": "assets/images/image1.png",
+      "alt": "Lunettes de vues noires avec les branches marrons"
     },
     {
       "id": 2,
       "name": "Produit 2",
       "type": "Solaire",
       "price": "65€",
-      "imageUrl": "assets/images/image3.png"
+      "imageUrl": "assets/images/image2.png",
+      "alt": "Lunettes de vues noires"
     },
     {
       "id": 3,
       "name": "Produit 3",
       "type": "Lunette de vue",
       "price": "65€",
-      "imageUrl": "assets/images/image1.png"
+      "imageUrl": "assets/images/image1.png",
+      "alt": "Lunettes de vues noires avec les branches marrons"
     },
     {
       "id": 4,
       "name": "Produit 4",
       "type": "Solaire",
       "price": "65€",
-      "imageUrl": "assets/images/image3.png"
+      "imageUrl": "assets/images/image3.png",
+      "alt": "Lunettes de soleil noires légèrement marrons"
     },
     {
       "id": 5,
       "name": "Produit 5",
       "type": "Lunette de vue",
       "price": "65€",
-      "imageUrl": "assets/images/image1.png"
+      "imageUrl": "assets/images/image1.png",
+      "alt": "Lunettes de vues noires avec les branches marrons"
     },
     {
       "id": 6,
       "name": "Produit 6",
       "type": "Solaire",
       "price": "65€",
-      "imageUrl": "assets/images/image3.png"
+      "imageUrl": "assets/images/image3.png",
+      "alt": "Lunettes de soleil noires légèrement marrons"
     }
   ]
 }
