@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalogue de Produits</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css" />
     <style>
       html {
         overflow-y: scroll;
@@ -14,32 +14,36 @@
   </head>
   <body class="bg-white">
     <main
-      class="flex flex-col gap-20 items-center px-16 py-28 mx-auto w-full max-w-none bg-white"
+      class="flex flex-col gap-6 items-center px-16 py-28 mx-auto w-full max-w-none bg-white"
     >
-      <header
-        class="flex flex-col gap-6 items-start w-full max-w-screen-xl"
-      >
-        <h1 class="text-5xl font-bold text-black">Catalogue</h1>
-        <p class="text-lg text-black">
-          La liste de tous nos produits
-        </p>
+      <header class="flex flex-col gap-6 w-full max-w-screen-xl">
+        <button
+          class="lg:hidden block flex gap-1 items-center self-end border border-black px-28 py-2"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="size-4"
+          >
+            <path
+              d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z"
+            />
+          </svg>
+          Filtres
+        </button>
       </header>
 
-      <section
-        class="flex flex-row flex-wrap gap-16 w-full max-w-screen-xl"
-      >
+      <section class="flex flex-row gap-16 w-full max-w-screen-xl">
         <!-- Desktop Filter Sidebar -->
-        <aside
-          class="flex flex-col gap-6 w-[292px]"
-        >
+        <aside class="hidden lg:block flex flex-col gap-6">
           <h2 class="text-2xl font-bold text-black">Filtres</h2>
-          <div class="flex flex-col">
+          <div class="flex flex-col w-[292px]">
             <!-- Filter Section: Product Type -->
             <div
               class="filter-section flex items-center px-2 py-5 border-t border-solid cursor-pointer select-none border-t-black"
             >
-              <span
-                class="flex-1 text-lg font-semibold text-black"
+              <span class="flex-1 text-lg font-semibold text-black"
                 >Type de produit</span
               >
               <div>
@@ -70,16 +74,18 @@
               <label
                 class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
               >
-              <input
-                type="checkbox"
-                class="hidden real-checkbox"
-                value="Lunette de vue"
-              />
-              <div
+                <input
+                  type="checkbox"
+                  class="hidden real-checkbox"
+                  value="Lunette de vue"
+                />
+                <div
                   class="checkbox relative rounded border-2 border-black border-solid transition-all cursor-pointer duration-[0.2s] ease-[ease] h-[18px] w-[18px]"
                   data-filter="eyeglasses"
                 ></div>
-              <span class="text-base text-black select-none">Lunette de vue</span>
+                <span class="text-base text-black select-none"
+                  >Lunette de vue</span
+                >
               </label>
               <label
                 class="filter-option flex gap-3 items-center px-2 py-2 transition-all cursor-pointer duration-[0.2s]"
@@ -102,9 +108,8 @@
         <!-- Product Grid -->
         <section
           id="products"
-          class="product-grid grid relative grow gap-8 w-auto grid-cols-3"
-        >          
-        </section>
+          class="product-grid grid relative grow gap-8 w-auto md:grid-cols-2 xl:grid-cols-3"
+        ></section>
       </section>
     </main>
     <!-- Custom JS file -->
